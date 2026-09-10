@@ -251,7 +251,7 @@ data class CoachAttendanceEntity(
             onDelete = ForeignKey.SET_NULL
         )
     ],
-    indices = [Index(value = ["date"], unique = true), Index(value = ["cca_id"]), Index(value = ["completed_by_coach_id"])]
+    indices = [Index(value = ["cca_id", "date"], unique = true), Index(value = ["completed_by_coach_id"])]
 )
 data class ClassSessionEntity(
     @PrimaryKey(autoGenerate = true)
